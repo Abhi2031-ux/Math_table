@@ -1,5 +1,5 @@
 # Math_table
-<h4>Hi</h4>
+<h2>Hi</h2>
 <br>
 This website creates tables.
 <br>
