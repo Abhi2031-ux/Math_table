@@ -6,9 +6,6 @@ input.value = 2;
 
 createTable();
 
-input.value = 2;
-
-
 function createTable() {
 
     if (input.value === 0 || input.value === "") {
