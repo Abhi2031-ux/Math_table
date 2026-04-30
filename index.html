@@ -10,9 +10,6 @@
 
 <body>
 
-    <div class="container"></div>
-
-
     <div class="title">
         <button class="button" data-text="Awesome">
             <span class="actual-text">&nbsp;Math&nbsp;</span>
@@ -21,14 +18,67 @@
     </div>
 
     <div class="main">
-        <div class="input-section">
-            <div class="content">
-                <div class="num_txt">Enter a number to create table:</div>
-                <input type="number" id="number" placeholder="2">
+        <div class="table_sec">
+            <div class="input-section">
+                <div class="content">
+                    <div class="num_txt">Enter a number to create table:</div>
+                    <input type="number" id="number" placeholder="2">
+                </div>
             </div>
+
+            <div class="output_section"></div>
         </div>
 
-        <div class="output_section"></div>
+        <div class="plus_sec">
+            <div class="type_plus">
+                <input type="number" class="plus_num" id="plus_1" placeholder="2">
+                <p class="plus_symbal">+</p>
+                <input type="number" class="plus_num" id="plus_2" placeholder="2">
+            </div>
+
+            <div class="plus_box_1"></div>
+            <div class="plus_box_2"></div>
+            <div class="plus_final_ans"></div>
+        </div>
+
+        <div class="mienis_sec">
+            <div class="type_mienis">
+                <input type="number" class="mienis_num" id="mienis_1" placeholder="2">
+                <p class="mienis_symbal">-</p>
+                <input type="number" class="mienis_num" id="mienis_2" placeholder="2">
+            </div>
+
+            <div class="mienis_box_1"></div>
+            <div class="mienis_box_2"></div>
+            <div class="mienis_final_ans"></div>
+        </div>
+
+        <div class="multiply_sec">
+            <div class="type_multi">
+                <input type="number" class="multi_num" id="multi_1" placeholder="2">
+                <p class="x">X</p>
+                <input type="number" class="multi_num" id="multi_2" placeholder="2">
+            </div>
+
+            <div class="multi_box_1">
+                <p class="multiply_num_1"></p>
+            </div>
+
+            <div class="multi_box_2">
+                x
+                <p class="multiply_num_2"></p>
+            </div>
+
+            <div class="final_answer"></div> <!-- Todo: This is a Final Answer Section-->
+
+        </div>
+
+        <div class="more_for">
+            <div class="table for">Table</div>
+            <div class="plus for">Add</div>
+            <div class="mienis for">Subtrack</div>
+            <div class="multi for">Multiply</div>
+        </div>
 
     </div>
 
