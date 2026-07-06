@@ -73,11 +73,42 @@
 
         </div>
 
+        <div class="calculater_sec">
+            <div class="cal_box">
+                <input type="text" id="calculater_input" readonly>
+
+                <div class="button">
+
+                    <button onclick="clearDisplay()" class="btn">C</button>
+                    <button onclick="Delete()" class="btn">→</button>
+                    <button onclick="append('%')" class="btn">%</button>
+                    <button onclick="append('/')" class="btn">/</button>
+                    <button onclick="append('7')" class="btn">7</button>
+                    <button onclick="append('8')" class="btn">8</button>
+                    <button onclick="append('9')" class="btn">9</button>
+                    <button onclick="append('*')" class="btn">x</button>
+                    <button onclick="append('4')" class="btn">4</button>
+                    <button onclick="append('5')" class="btn">5</button>
+                    <button onclick="append('6')" class="btn">6</button>
+                    <button onclick="append('-')" class="btn">-</button>
+                    <button onclick="append('1')" class="btn">1</button>
+                    <button onclick="append('2')" class="btn">2</button>
+                    <button onclick="append('3')" class="btn">3</button>
+                    <button onclick="append('+')" class="btn">+</button>
+                    <button onclick="append('.')" class="btn">.</button>
+                    <button onclick="append('0')" class="btn">0</button>
+                    <button onclick="calculate()" class="btn calc">=</button>
+
+                </div>
+            </div>
+        </div>
+
         <div class="more_for">
             <div class="table for">Table</div>
             <div class="plus for">Add</div>
             <div class="mienis for">Subtrack</div>
             <div class="multi for">Multiply</div>
+            <div class="cal for">Calculater</div>
         </div>
 
     </div>

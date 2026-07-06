@@ -33,6 +33,10 @@ const final_answer = document.querySelector('.final_answer');
 const answer_1 = document.querySelector('.answer_1');
 const answer_2 = document.querySelector('.answer_2');
 
+const calculater_sec = document.querySelector('.calculater_sec');
+const calculater_for = document.querySelector('.cal');
+const calculater_input = document.getElementById("calculater_input");
+
 input.addEventListener("input", createTable);
 input.value = 2;
 plus_1.value = 2;
@@ -96,11 +100,11 @@ function createMultiply() {
         final_answer.style.display = "flex";
         final_answer.style.justifyContent = "end";
         final_answer.innerHTML = num1 * num2;
-    } else if (num1.length < 20 ) {
+    } else if (num1.length < 20) {
         console.log("what");
 
         final_answer.style.display = "block";
-        
+
         let rows = [];
 
         // reverse second number (for manual multiplication)
@@ -134,78 +138,30 @@ function createMultiply() {
     }
 }
 
-// function createMultiply() {
-//     multiply_num_1.innerHTML = multi_1.value;
-//     multiply_num_2.innerHTML = multi_2.value;
 
-//     final_answer.style.display = "flex";
+function append(value) {
+    calculater_input.value += value;
+}
 
-//     if (multiply_num_1.innerHTML.length === 1 || multiply_num_2.innerHTML.length === 1) {
-//         final_answer.innerHTML = multi_1.value * multi_2.value;
-//     } else {
-//         for (let i = 1; multiply_num_2.innerHTML.length > i; i++) {
-//             let newDiv = document.createElement("div");
-//             newDiv.className = `new_row_${i}`;
-//             newDiv.innerHTML = "1";
-//             final_answer.insertAdjacentElement("beforebegin", newDiv);
-//             console.log("row", i);
-//         }
+function Delete() {
+    calculater_input.value = calculater_input.value.slice(0, -1);
 
-//         console.log("amamamamam")
-//     }
+}
 
+function clearDisplay() {
+    calculater_input.value = "";
 
-//     // let new_multi_box = multi_box_2.innerHTML.slice(1)
-//     // console.log(new_multi_box);
+}
 
-//     // if(multi_box_2.innerHTML.length == 3) {
-//     //     console.log("multi_box_2 has 1 digit");
+function calculate() {
+    try {
+        calculater_input.value = eval(calculater_input.value);
 
-//     //     for (let i = 1; i < new_multi_box.length + 1; i++) {
-//     //         let newDiv = document.createElement("div");
-//     //         newDiv.className = `new_row_${i}`;
-//     //         newDiv.innerHTML = "1";
-//     //         final_answer.insertAdjacentElement("beforebegin", newDiv);
-//     //         console.log("row", i);
-//     //     }
-//     // }
+    } catch (error) {
+        calculater_input.value = "Error";
 
-
-//     // if (multi_2.value.length == 1) {
-//     //     answer_1.innerHTML = multi_1.value * multi_2.value;
-//     //     final_answer.style.display = "none";
-//     //     answer_2.style.display = "none";
-
-//     // } else if (multi_2.value.at(-1) == 0) {
-//     //     a = multi_1.value.length;
-//     //     answer_1.innerHTML = "0".repeat(a);
-//     //     answer_2.style.display = "flex";
-//     //     final_answer.style.display = "flex";
-
-//     //     answer_2.innerHTML = multi_2.value[0] * multi_1.value + "x";
-
-//     //     num_1 = Number(answer_1.innerHTML);
-//     //     console.log(num_1);
-//     //     num_2 = Number(answer_2.innerHTML.slice(0, -1) + "0");
-
-//     //     if (answer_1.innerHTML.at(-1) == "0") {
-//     //         final_answer.innerHTML = num_1 + num_2;
-//     //     }
-
-//     //     console.log("num_1 is: ", num_1);
-//     //     console.log("num_2 is: ", num_2);
-
-//     // } else if (multi_2.value.length == 2) {
-//     //     final_answer.style.display = "flex";
-
-//     //     if (answer_1.innerHTML.at(-1) != "0") {
-//     //         num_1 = Number(answer_1.innerHTML);
-//     //         final_answer.innerHTML = num_1 + num_2;
-//     //     }
-
-//     // }
-// }
-
+    }
+}
 createPlus()
 createMienis()
 createMultiply()
@@ -215,6 +171,7 @@ table_for.addEventListener("click", () => {
     plus_sec.style.display = "none";
     mienis_sec.style.display = "none";
     multi_sec.style.display = "none";
+    calculater_sec.style.display = "none";
 });
 
 plus_for.addEventListener("click", () => {
@@ -222,6 +179,7 @@ plus_for.addEventListener("click", () => {
     plus_sec.style.display = "block";
     mienis_sec.style.display = "none";
     multi_sec.style.display = "none";
+    calculater_sec.style.display = "none";
 });
 
 mienis_for.addEventListener("click", () => {
@@ -229,6 +187,7 @@ mienis_for.addEventListener("click", () => {
     plus_sec.style.display = "none";
     mienis_sec.style.display = "block";
     multi_sec.style.display = "none";
+    calculater_sec.style.display = "none";
 });
 
 multi_for.addEventListener("click", () => {
@@ -236,6 +195,15 @@ multi_for.addEventListener("click", () => {
     plus_sec.style.display = "none";
     mienis_sec.style.display = "none";
     multi_sec.style.display = "block";
+    calculater_sec.style.display = "none";
+});
+
+calculater_for.addEventListener("click", () => {
+    table_sec.style.display = "none";
+    plus_sec.style.display = "none";
+    mienis_sec.style.display = "none";
+    multi_sec.style.display = "none";
+    calculater_sec.style.display = "flex";
 });
 
 // let a = 6;
